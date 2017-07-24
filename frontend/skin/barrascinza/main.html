@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="description" content="sistema"/>
+		
+		<!-- força não guardar a página em cache -->
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		
+		<!-- ignora os bots indexadores -->
+		<meta name="robots" content="noindex,nofollow"/>
+		
+		<title>Sistema</title>
+		
+		<!-- icones -->
+		<link rel="add icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="img/favicon.ico" type="image/ico" type="image/x-icon" />
+		
+		<!-- LIBS -->
+		
+		<!-- jQuery -->
+		<script src="lib/jquery-2.1.1.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<link href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+		
+		<!-- css -->
+		<link title="look_and_feel" rel="stylesheet" href="<%template%>css/reset.css" type="text/css"/>
+		<link title="look_and_feel" rel="stylesheet" href="<%template%>css/skin.css" type="text/css"/>
+				
+		<!-- js -->
+		<script type="text/javascript" src="<%template%>js/skin.js"></script>
+		
+		<!-- libs do sistema -->
+		<script type="text/javascript" src="lib/sistema.js"></script>
+	</head>
+	
+	<body>
+	
+		<header>
+			
+			<div class="barra cabecalho">
+					<div>Empresa XYZ</div>
+					<div>
+						<nav class="menu">
+							<ul>
+								<li>
+									<a href="#">sistema</a>
+								</li>
+								<li>
+									<a href="#">clientes</a>
+								</li>
+								<li>
+									<a href="#">produtos</a>
+								</li>
+								<li>
+									<a href="#">ajuda</a>
+								</li>
+								<li>
+									<a href="#">sair</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+			</div>
+			
+		</header>
+		
+		<section>
+			
+			<div class="janela">
+				<div class="barra janelaTitulo">
+					Nome da Janela
+				</div>
+				<div class="janelaMenu">
+					<ul>
+						<li>
+							<a href="#">Listar</a>
+						</li>
+						<li>
+							<a href="#">Inserir</a>
+						</li>
+						<li>
+							<a href="#">Consultar</a>
+						</li>
+						<li>
+							<a href="#">Relatórios</a>
+						</li>
+					</ul>
+				</div>
+				<div class="janelaCorpo">
+					
+					<!-- criando coisas com o Bootstrap -->
+					
+					<button type="button" class="btn btn-default btn-lg">
+						<span class="glyphicon glyphicon-star"></span> Star
+					</button>
+					
+					<div class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" 
+					  				data-toggle="dropdown">
+					    Dropdown
+					    <span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+					    <li role="presentation" class="divider"></li>
+					    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+					  </ul>
+					</div>
+					
+					<!-- fim -->
+					
+					<!-- para brincar com jQuery -->
+					<a href="#" id="fechaJanela">Fechar Janela!</a>
+					
+					<select class="form-control" id="caixa">
+					    <option value="one">One</option>
+					    <option value="two">Two</option>
+					    <option value="three">Three</option>
+					    <option value="four444">Four</option>
+					    <option value="five">Five</option>
+					</select>
+					<!-- fim -->
+					
+				</div>
+			</div> <!-- fim janela -->
+			
+		</section>
+		
+		<footer>
+			
+			<div class="barra rodape">
+				<div>Servidor <span>Ok</span> &bull; Base <span>Ok</span></div>
+				<div>
+					<!-- tag da data -->
+					<%data%>
+				</div>
+			</div>
+			
+		</footer>
+	
+	</body>
+	
+</html>

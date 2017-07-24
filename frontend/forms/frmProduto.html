@@ -1,0 +1,74 @@
+<!--
+	frmProduto.html
+		formulário de cadastro de produto
+	Autor: Juquinha <juquinha@email.com>
+	Data: 20/12/2014
+	Modificado: Joãozinho <jaozin@email.com>
+	Data: 21/12/2014
+-->
+
+<div id="msgErro" style="display: none;" class="alert alert-danger alert-dismissible" role="alert">
+	Erro 
+</div>
+
+<div id="msgSucesso" style="display: none;" class="alert alert-success alert-dismissible" role="alert">
+	Ok!
+</div>
+
+<!-- tabs -->
+<ul class="nav nav-tabs" role="tablist" id="tabProduto">
+	<li class="active">
+		<a href="#informacoes" role="tab" data-toggle="tab">Informações</a>
+	</li>
+	<li>
+		<a href="#lista" role="tab" data-toggle="tab">Lista</a>
+	</li>
+	<li>
+		<a href="#busca" role="tab" data-toggle="tab">
+			<span class="glyphicon glyphicon-search"></span>
+			Busca
+		</a>
+	</li>
+</ul>
+
+<!-- painéis -->
+<div class="tab-content">
+	<div class="tab-pane active" id="informacoes">
+		
+		<!-- guarda codigo em campo oculto -->
+		<input type="hidden" id="hdnCodigo" value="0"/>
+		
+		<label>Nome</label>
+		<input type="text" id="edtNome" class="form-control" autofocus="autofocus"/>
+		
+		<label>Tipo</label>
+		<input type="text" id="edtTipo" class="form-control"/>
+		
+		<label>Marca</label>
+		<input type="text" id="edtMarca" class="form-control"/>
+		
+		<label>Quantidade</label>
+		<input type="text" id="edtQuantidade" class="form-control"/>
+		
+		<label>Preço</label>
+		<input type="text" id="edtPreco" class="form-control"/>
+		 		  	
+	</div>
+	<div class="tab-pane" id="lista">
+  		
+  		<!-- lista completa de itens -->
+  		
+	</div>
+	<div class="tab-pane" id="busca">
+  		<label>Preencha com o nome ou código do produto</label>
+  		<div class="input-group">
+			<input type="text" id="edtBusca" class="form-control">
+			<span class="input-group-btn">
+				<button class="btn btn-default" type="button" id="btnBuscar">
+					<span class="glyphicon glyphicon-search"></span>
+					Buscar
+				</button>
+			</span>
+		</div>
+	</div>
+</div>

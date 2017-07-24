@@ -1,0 +1,57 @@
+/*
+	skin.css
+		estilos do sistema/tema
+	 
+*/
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+	font-family: Helvetica, sans-serif;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: white;
+	cursor: default;
+}
+
+table {
+	width: 100%;
+}
+	table thead tr {
+		border-bottom: 1px solid black;
+	}
+		table thead tr th {
+			text-transform: capitalize !important;
+			font-weight: bold !important;
+			padding: 5px !important;
+			text-align: center;
+		}
+		
+		table thead tr th:nth-child(2) {
+			width: 200px;
+		}
+		
+	table tbody tr:nth-child(odd) {
+		background-color: #fafafa;
+		padding: 7px;
+	}
+	
+	table tbody tr:hover {
+		background-color: #eaf0fa;
+	}
+		table tbody tr td:nth-last-child(-n+4) {
+			text-align: center !important;
+		}
+
+
+/* ajusta o modal do bootstrap */
+.modal-vertical-centered {
+  transform: translate(0, 50%) !important;
+  -ms-transform: translate(0, 50%) !important; /* IE 9 */
+  -webkit-transform: translate(0, 50%) !important; /* Safari and Chrome */
+}

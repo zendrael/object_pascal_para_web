@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8"/>
+		<meta name="description" content="sistema"/>
+		
+		<!-- força não guardar a página em cache -->
+		<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+		<meta http-equiv="Pragma" content="no-cache" />
+		<meta http-equiv="Expires" content="0" />
+		
+		<!-- ignora os bots indexadores -->
+		<meta name="robots" content="noindex,nofollow"/>
+		
+		<title>Sistema</title>
+		
+		<!-- icones -->
+		<link rel="add icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="icon" href="img/favicon.ico" type="image/ico" type="image/x-icon" />
+		
+		<!-- css RESET -->
+		<link title="look_and_feel" rel="stylesheet" href="<%template%>css/reset.css" type="text/css"/>
+		
+		<!-- LIBS -->
+		
+		<!-- jQuery -->
+		<script src="lib/jquery-2.1.1.min.js"></script>
+		
+		<!-- Bootstrap -->
+		<link href="lib/bootstrap-3.2.0-dist/css/bootstrap.min.css" rel="stylesheet"/>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<script src="lib/bootstrap-3.2.0-dist/js/bootstrap.min.js"></script>
+		
+		<!-- plugin de tabelas para bootstrap -->
+		<!--<link rel="stylesheet" href="lib/bootstrap-tables/bootstrap-table.css">
+		<script src="lib/bootstrap-tables/bootstrap-table.js"></script>
+		-->
+		
+		<!-- css da skin -->
+		<link title="look_and_feel" rel="stylesheet" href="<%template%>css/skin.css" type="text/css"/>
+				
+		<!-- js da skin -->
+		<script type="text/javascript" src="<%template%>js/skin.js"></script>
+		
+		<!-- libs do sistema -->
+		<script type="text/javascript" src="lib/sistema.js"></script>
+		
+		<!-- js das opções/menus do sistema -->
+		<script type="text/javascript" src="forms/frmProduto.js"></script>
+
+	</head>
+	
+	<body>
+	
+		<header>
+			
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+				<div class="container-fluid">
+				
+					<div class="navbar-header">
+				      <a class="navbar-brand" href="#">Sistema XYZ</a>
+				    </div>
+				
+					<div id="divSistemaMenus">
+						
+						<!--<%menus class="nav navbar-nav"%>-->
+
+						<!--<ul class="nav navbar-nav">
+	        				<li class="active">
+	        					<a href="#">Informações</a>
+	        				</li>
+							<li>
+								<a href="#">Clientes</a>
+							</li>
+	        			</ul>
+	        			-->
+	        			
+        			</div>
+				
+					<!-- menu do usuário -->
+					<ul id="drpUsuario" style="display: none;" class="nav navbar-nav navbar-right">
+	        			<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+								<span class="glyphicon glyphicon-user"></span>
+								<span id="spnUsuario">Usuário</span> 
+								<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="#">Informações</a>
+								</li>
+								<li>
+									<a href="#">Agenda</a>
+								</li>
+								<li class="divider"></li>
+								<li>
+									<a href="#" onclick="logout();">Sair</a>
+								</li>
+							</ul>
+						</li>
+	        		</ul>
+					<!-- fim menu do usuário -->
+					
+				</div>
+			</nav>
+						
+		</header>
+		
+		<section id="secConteudo">
+			
+			<!-- login -->
+			<div class="modal fade" 
+				id="janelaLogin" 
+				tabindex="-1" 
+				data-backdrop="static" 
+				data-keyboard="false">
+				<div class="modal-dialog modal-sm modal-vertical-centered">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title">Acesso ao Sistema</h4>
+						</div>
+						
+						<div class="modal-body">
+							
+							<div id="msgErro" style="display: none;" class="alert alert-danger" role="alert">
+								Usuário e/ou Senha incorretos!
+							</div>
+							
+							<div id="msgAutentica" style="display: none;" class="alert alert-info" role="alert">
+								Autenticando...
+							</div>
+							
+							<label>Usuário</label>
+							<input type="text" id="edtUsuario" class="form-control" autofocus="autofocus"/>
+							
+							<label>Senha</label>
+							<input type="password" id="edtSenha" class="form-control"/>
+							
+						</div>
+						
+						<div class="modal-footer">
+							<button id="btnLogin" type="button" class="btn btn-success">Acessar</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		
+		<footer>
+			
+			<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+				<div class="container-fluid">
+				
+					<p class="navbar-text">
+						Servidor <b>OK</b>
+					</p>
+				
+					<p class="navbar-text navbar-right">
+						<%data%>
+					</p>
+				
+				</div>
+			</nav>
+			
+		</footer>
+	
+	</body>
+	
+</html>

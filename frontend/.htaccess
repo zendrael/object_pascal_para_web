@@ -1,0 +1,23 @@
+
+# Ninguém mexe neste arquivo
+<Files ~ “^.(htaccess|htpasswd)$”>
+	deny from all
+</Files>
+
+Options +FollowSymLinks
+
+RewriteEngine On
+RewriteBase /
+
+# possibilita acessar arquivos sem usar extensão .html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+# Redireciona toda página HTML para o CGI
+# faz com que o index.html seja apenas uma "dumb page"
+RewriteRule ^(.+)\.html$  /cgi-bin/sistemaMVC/sistema/getHTML [L,NC,QSA]
+
+# Redireciona ao form de LOGIN se ele for chamado na URL
+# exemplo: http://www.meu_sistema.com/login
+RewriteRule ^login$  /cgi-bin/sistemaMVC/sistema/doLogin [L,NC,QSA]

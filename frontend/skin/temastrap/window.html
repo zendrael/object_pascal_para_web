@@ -1,0 +1,41 @@
+
+<!-- janela padrão -->
+<div class="modal fade in" 
+	id="janelaPadrao" 
+	tabindex="-1" 
+	role="dialog" 
+	data-show="true"
+	aria-labelledby="myModalLabel" 
+	aria-hidden="true"
+	data-keyboard="false">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">&times;</span>
+					<span class="sr-only">Fechar</span>
+				</button>
+				<h4 class="modal-title">
+				
+				<!-- titulo/caption da janela -->
+				<%titulo%>
+					
+				</h4>
+			</div>
+			
+			<div class="modal-body">
+				
+				<!-- conteudo do form -->
+				<%conteudo%>
+				
+			</div>
+			
+			<div class="modal-footer">
+				
+				<!-- botões -->
+				<%botoes class="btn btn-primary"%>
+				
+			</div>
+		</div>
+	</div>
+</div>

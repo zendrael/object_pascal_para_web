@@ -1,0 +1,74 @@
+/*
+	skin.css
+		estilos do sistema/tema
+	 
+*/
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 16px;
+	font-family: Helvetica, sans-serif;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	cursor: default;
+	background-color: #f2f2f2;
+	font-family: "Segoe UI WPC","Segoe UI",Tahoma,"Microsoft Sans Serif",Verdana,sans-serif;
+}
+
+.lateral {
+    width: 200px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #0072C6;
+}
+
+	.lateral > div {
+		padding: 30px;	
+	}
+	
+.conteudo {
+	margin-left: 200px;
+}
+
+.conteudoTitulo {
+	font-size: 20px;
+	margin: 0px 30px;
+	padding: 20px 0px;
+	color: #0072C6;
+	border-bottom: 1px solid #0072C6;
+}
+
+.conteudoMenu {
+	margin: 0px 30px;
+	padding: 10px 0px;
+	border-bottom: 1px solid #c4c4c4;
+}
+
+	.conteudoMenu ul li {
+		display: inline;
+		padding-right: 15px;
+	}
+	
+		.conteudoMenu ul li a {
+			color: #c4c4c4;
+			text-decoration: none;
+		}
+		
+		.conteudoMenu ul li a:hover {
+			color: #0072c6;
+		}
+
+.conteudoCorpo {
+	margin: 0px 30px;
+	padding: 30px 0px;
+}
+
+
+

@@ -1,0 +1,147 @@
+/*
+	skin.css
+		estilos do sistema/tema
+	 
+*/
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-size: 13px;
+	font-family: Helvetica, sans-serif;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: white;
+	cursor: default;
+}
+
+.barra {
+	background-color: #cccccc;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#bbbbbb));
+	background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+	background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+	background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+	background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+	background-image: linear-gradient(top, #dddddd, #bbbbbb);
+}
+
+.cabecalho {
+	border-bottom: 1px solid #aaa;
+	padding: 8px 8px 8px 8px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+	.cabecalho div:first-child {
+		font-style: italic;
+		font-weight: bold;
+		text-shadow: 1px 1px 1px white;
+		width: 100px;
+		float: left;
+		/*font-size: 30px;*/
+	}
+
+
+.rodape {
+	border-top: 1px solid #aaa;
+	padding: 8px;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	font-style: italic;
+}
+	.rodape div:first-child {
+		float: left;
+		width: 30%;
+	}
+		.rodape div:first-child span {
+			color: #54d571;
+			font-weight: bold;
+			text-shadow: 1px 1px 1px black;
+		}
+	.rodape div:last-child {
+		float: right;
+		width: 30%;
+		text-align: right;
+		padding-right: 20px;
+	}
+	
+.menu ul {
+	
+}
+	.menu ul li {
+		display: inline-block;
+		padding: 0px 7px 0px 7px;
+	}
+	
+	.menu ul li a {
+		text-decoration: none;
+		text-transform: capitalize;
+		color: black;
+	}
+	.menu ul li a:hover {
+		color: blue;
+	}
+	
+	.menu ul li:last-child {
+		float: right;
+		padding-right: 20px;
+	}
+	
+.janela {
+	background-color: white;
+	height: 400px;
+	width: 700px;
+	
+	border-radius: 4px;
+	
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	
+	position: absolute;
+	margin: auto;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+
+.janelaTitulo {
+	padding: 8px;
+	/*background-color: #6d9ef0;*/
+	color: white;
+	border-radius: 3px 3px 0px 0px;
+}
+
+.janelaMenu {
+	padding: 8px;
+	border-bottom: 1px dashed #cbcacc;
+}
+
+	.janelaMenu ul li {
+		display: inline-block;
+		padding: 0px 7px 0px 7px;
+	}
+	
+		.janelaMenu ul li a {
+			color: #6d9ef0;
+			text-decoration: none;
+		}
+		
+		.janelaMenu ul li a:hover {
+			color: #0000FF;
+		}
+		
+		.janelaMenu ul li a:active {
+			color: black;
+		}
+
+.janelaCorpo {
+	padding: 8px;
+}
